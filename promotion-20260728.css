@@ -109,9 +109,13 @@ nav a:hover { color: var(--red); }
   transform: rotate(8deg); box-shadow: 0 0 0 5px var(--red), 0 0 0 7px var(--paper);
 }
 .date-card { position: absolute; z-index: 2; left: 2rem; bottom: 2rem; padding: 1.2rem 1.4rem; background: rgba(255,250,241,.95); box-shadow: 7px 7px 0 var(--red); }
-.date-card small, .date-card span { display: block; font-size: .67rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.date-card > small { display: block; color: var(--red); font-size: .67rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .date-card strong { display: block; margin: .2rem 0 .35rem; font-family: "Anton"; font-size: 2rem; font-weight: 400; text-transform: uppercase; }
-.date-card span { color: var(--red); }
+.countdown { display: flex; gap: .35rem; }
+.countdown > span { min-width: 3.1rem; padding: .45rem .35rem; background: var(--navy); color: white; text-align: center; }
+.countdown b { display: block; font-family: "Anton"; font-size: 1.35rem; font-weight: 400; line-height: 1; font-variant-numeric: tabular-nums; }
+.countdown small { display: block; margin-top: .3rem; color: #ccd4df; font-size: .52rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.countdown .countdown__ended { max-width: 15rem; padding: .65rem .8rem; color: white; font-size: .7rem; font-weight: 700; letter-spacing: .08em; line-height: 1.35; text-transform: uppercase; }
 
 .included { padding-block: 8rem; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 3.5rem; }
@@ -184,7 +188,9 @@ footer p { color: var(--muted); }
   .hero__visual { min-height: 480px; }
   .hero__visual > img { object-position: 58% 34%; }
   .hero__stamp { top: 1.4rem; right: 1.4rem; width: 88px; height: 88px; font-size: .82rem; }
-  .date-card { left: 1.2rem; bottom: 1.2rem; }
+  .date-card { left: 1.2rem; bottom: 1.2rem; padding: 1rem; }
+  .date-card strong { font-size: 1.65rem; }
+  .countdown > span { min-width: 2.75rem; }
   .hero__copy { padding: 2.4rem 1.4rem 3rem; }
   .hero h1 { font-size: clamp(3.8rem, 19vw, 5.3rem); }
   .hero__intro { font-size: .96rem; }
